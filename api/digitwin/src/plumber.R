@@ -9,6 +9,7 @@
 
 library(plumber)
 library(logger)
+library(jsonlite)
 
 source("DigiTwinFunction2.R")
 
@@ -38,6 +39,7 @@ function(){
 #* @post /predict/hurdle
 function(location) {
     log_info("location: ", location)
+    location <- as.numeric(jsonlite::fromJSON(location))
     result <- predict.hurdle(
         Location=location,
         Season='winter',

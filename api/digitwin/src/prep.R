@@ -2,7 +2,8 @@ install.packages(c(
     'roxygen2',
     'rversions',
     'logger',
-    'devtools'
+    'devtools',
+    'jsonlite'
 ))
 library(devtools)
 install_github('nielshintzen/vmstools/vmstools')
