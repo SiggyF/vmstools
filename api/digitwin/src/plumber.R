@@ -12,7 +12,7 @@ library(logger)
 
 source("DigiTwinFunction2.R")
 
-api <- 'https://storage.googleapis.com/hydro-engine-public/wmr/shrimp/'
+api <- 'https://storage.googleapis.com/hydro-engine-public/wmr/shrimp'
 
 
 log_info("reading data files")
