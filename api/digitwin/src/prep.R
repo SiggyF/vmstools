@@ -1,6 +1,7 @@
 install.packages(c(
     'roxygen2',
     'rversions',
+    'logger',
     'devtools'
 ))
 library(devtools)
