@@ -37,17 +37,18 @@ function(){
 #* @get /predict/hurdle
 #* @post /predict/hurdle
 function(location) {
-  result <- predict.hurdle(
-    Location=location,
-    Season='winter',
-    Neardist2restrictarea = 5,
-    allareasclosed = FALSE,
-    B0=B0,
-    B1=B1,
-    maindata=maindata,
-    Amat=Amat,
-    W=W,
-    hyperparams=hyperparams
-  )
-  return(result)
+    log_info("location: ", location)
+    result <- predict.hurdle(
+        Location=location,
+        Season='winter',
+        Neardist2restrictarea = 5,
+        allareasclosed = FALSE,
+        B0=B0,
+        B1=B1,
+        maindata=maindata,
+        Amat=Amat,
+        W=W,
+        hyperparams=hyperparams
+    )
+    return(result)
 }
